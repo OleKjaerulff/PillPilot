@@ -826,7 +826,7 @@
         private System.Windows.Forms.TextBox morgenFarveText1;
         private System.Windows.Forms.DateTimePicker morgenAlarm1;
         private System.Windows.Forms.CheckBox morgenTaget1;
-        private System.Windows.Forms.DateTimePicker morgenHvornår1;
+        public System.Windows.Forms.DateTimePicker morgenHvornår1;
         private System.Windows.Forms.DateTimePicker morgenHvornår2;
         private System.Windows.Forms.CheckBox morgenTaget2;
         private System.Windows.Forms.DateTimePicker morgenAlarm2;
@@ -878,6 +878,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-    }
+
+          }
 }
 

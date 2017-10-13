@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace PillPilot
 {
     public partial class Form1 : Form
@@ -15,7 +16,53 @@ namespace PillPilot
         public Form1()
         {
             InitializeComponent();
+            JustTime();
         }
+
+        public void JustTime()
+        {
+            morgenAlarm1.Format = DateTimePickerFormat.Time;
+            morgenHvornår1.Format = DateTimePickerFormat.Time;
+            morgenAlarm2.Format = DateTimePickerFormat.Time;
+            morgenHvornår2.Format = DateTimePickerFormat.Time;
+            middagAlarm1.Format = DateTimePickerFormat.Time;
+            middagHvornår1.Format = DateTimePickerFormat.Time;
+            middagAlarm2.Format = DateTimePickerFormat.Time;
+            middagHvornår2.Format = DateTimePickerFormat.Time;
+            aftenAlarm1.Format = DateTimePickerFormat.Time;
+            aftenHvornår1.Format = DateTimePickerFormat.Time;
+            aftenAlarm2.Format = DateTimePickerFormat.Time;
+            aftenHvornår2.Format = DateTimePickerFormat.Time;
+
+            morgenAlarm1.Format = DateTimePickerFormat.Custom;
+            morgenAlarm1.CustomFormat = "HH:mm";
+            morgenAlarm2.Format = DateTimePickerFormat.Custom;
+            morgenAlarm2.CustomFormat = "HH:mm";
+            middagAlarm1.Format = DateTimePickerFormat.Custom;
+            middagAlarm1.CustomFormat = "HH:mm";
+            middagAlarm2.Format = DateTimePickerFormat.Custom;
+            middagAlarm2.CustomFormat = "HH:mm";
+            aftenAlarm1.Format = DateTimePickerFormat.Custom;
+            aftenAlarm1.CustomFormat = "HH:mm";
+            aftenAlarm2.Format = DateTimePickerFormat.Custom;
+            aftenAlarm2.CustomFormat = "HH:mm";
+
+            morgenHvornår1.Format = DateTimePickerFormat.Custom;
+            morgenHvornår1.CustomFormat = "HH:mm";
+            morgenHvornår2.Format = DateTimePickerFormat.Custom;
+            morgenHvornår2.CustomFormat = "HH:mm";
+            middagHvornår1.Format = DateTimePickerFormat.Custom;
+            middagHvornår1.CustomFormat = "HH:mm";
+            middagHvornår2.Format = DateTimePickerFormat.Custom;
+            middagHvornår2.CustomFormat = "HH:mm";
+            aftenHvornår1.Format = DateTimePickerFormat.Custom;
+            aftenHvornår1.CustomFormat = "HH:mm";
+            aftenHvornår2.Format = DateTimePickerFormat.Custom;
+            aftenHvornår2.CustomFormat = "HH:mm";
+
+
+        }
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {

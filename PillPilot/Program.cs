@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace PillPilot
 {
     static class Program
@@ -17,11 +18,17 @@ namespace PillPilot
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+            
 
-        
 
 
-        
+
+
+
+
+
+
+
         }
     }
 }
