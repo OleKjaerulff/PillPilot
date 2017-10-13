@@ -18,6 +18,7 @@ namespace PillPilot
             InitializeComponent();
             JustTime();
             LoadMedicineList();
+            //System.Media.SystemSounds.Beep.Play();
         }
 
         public void JustTime()
