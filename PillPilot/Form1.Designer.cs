@@ -207,6 +207,7 @@
             this.morgenFormText1.Name = "morgenFormText1";
             this.morgenFormText1.Size = new System.Drawing.Size(100, 26);
             this.morgenFormText1.TabIndex = 10;
+            this.morgenFormText1.TextChanged += new System.EventHandler(this.morgenFormText1_TextChanged);
             // 
             // morgenFarveText1
             // 

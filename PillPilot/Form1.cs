@@ -17,6 +17,7 @@ namespace PillPilot
         {
             InitializeComponent();
             JustTime();
+            LoadMedicineList();
         }
 
         public void JustTime()
@@ -62,7 +63,38 @@ namespace PillPilot
 
 
         }
-        
+
+        private void LoadMedicineList()
+        {
+            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Ole Kjaerulff\Documents\PillPilotData\MedicineList.txt");
+            morgenNavnText1.Text = lines[0];
+            morgenDosisText1.Text = lines[1];
+            morgenFormText1.Text = lines[2];
+            morgenFarveText1.Text = lines[3];
+            morgenNavnText2.Text = lines[4];
+            morgenDosisText2.Text = lines[5];
+            morgenFormText2.Text = lines[6];
+            morgenFarveText2.Text = lines[7];
+
+            middagNavnText1.Text = lines[8];
+            middagDosisText1.Text = lines[9];
+            middagFormText1.Text = lines[10];
+            middagFarveText1.Text = lines[11];
+            middagNavnText2.Text = lines[12];
+            middagDosisText2.Text = lines[13];
+            middagFormText2.Text = lines[14];
+            middagFarveText2.Text = lines[15];
+
+            aftenNavnText1.Text = lines[16];
+            aftenDosisText1.Text = lines[17];
+            aftenFormText1.Text = lines[18];
+            aftenFarveText1.Text = lines[19];
+            aftenNavnText2.Text = lines[20];
+            aftenDosisText2.Text = lines[21];
+            aftenFormText2.Text = lines[22];
+            aftenFarveText2.Text = lines[23];
+        }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -253,6 +285,11 @@ namespace PillPilot
                 aftenTaget2.ForeColor = Color.Green;
                 aftenHvornår2.ForeColor = Color.Green;
             }
+        }
+
+        private void morgenFormText1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
