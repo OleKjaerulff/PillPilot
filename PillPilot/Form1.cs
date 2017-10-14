@@ -18,7 +18,7 @@ namespace PillPilot
             InitializeComponent();
             JustTime();
             LoadMedicineList();
-            //System.Media.SystemSounds.Beep.Play();
+
         }
 
         public void JustTime()
@@ -72,28 +72,34 @@ namespace PillPilot
             morgenDosisText1.Text = lines[1];
             morgenFormText1.Text = lines[2];
             morgenFarveText1.Text = lines[3];
-            morgenNavnText2.Text = lines[4];
-            morgenDosisText2.Text = lines[5];
-            morgenFormText2.Text = lines[6];
-            morgenFarveText2.Text = lines[7];
+            morgenAlarm1.Text = lines[4];
+            morgenNavnText2.Text = lines[5];
+            morgenDosisText2.Text = lines[6];
+            morgenFormText2.Text = lines[7];
+            morgenFarveText2.Text = lines[8];
+            morgenAlarm2.Text = lines[9];
 
-            middagNavnText1.Text = lines[8];
-            middagDosisText1.Text = lines[9];
-            middagFormText1.Text = lines[10];
-            middagFarveText1.Text = lines[11];
-            middagNavnText2.Text = lines[12];
-            middagDosisText2.Text = lines[13];
-            middagFormText2.Text = lines[14];
-            middagFarveText2.Text = lines[15];
+            middagNavnText1.Text = lines[10];
+            middagDosisText1.Text = lines[11];
+            middagFormText1.Text = lines[12];
+            middagFarveText1.Text = lines[13];
+            middagAlarm1.Text = lines[14];
+            middagNavnText2.Text = lines[15];
+            middagDosisText2.Text = lines[16];
+            middagFormText2.Text = lines[17];
+            middagFarveText2.Text = lines[18];
+            middagAlarm2.Text = lines[19];
 
-            aftenNavnText1.Text = lines[16];
-            aftenDosisText1.Text = lines[17];
-            aftenFormText1.Text = lines[18];
-            aftenFarveText1.Text = lines[19];
-            aftenNavnText2.Text = lines[20];
-            aftenDosisText2.Text = lines[21];
-            aftenFormText2.Text = lines[22];
-            aftenFarveText2.Text = lines[23];
+            aftenNavnText1.Text = lines[20];
+            aftenDosisText1.Text = lines[21];
+            aftenFormText1.Text = lines[22];
+            aftenFarveText1.Text = lines[23];
+            aftenAlarm1.Text = lines[24];
+            aftenNavnText2.Text = lines[25];
+            aftenDosisText2.Text = lines[26];
+            aftenFormText2.Text = lines[27];
+            aftenFarveText2.Text = lines[28];
+            aftenAlarm2.Text = lines[29];
         }
 
 
@@ -150,7 +156,7 @@ namespace PillPilot
                 morgenAlarm1.ForeColor = Color.Green;
                 morgenTaget1.ForeColor = Color.Green;
                 morgenHvornår1.ForeColor = Color.Green;
-            }            
+            }
         }
 
 
@@ -291,6 +297,23 @@ namespace PillPilot
         private void morgenFormText1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        int i = 0;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime time = DateTime.Now;
+            //if (time.ToString("HH:mm") == "14:51")
+            //if (time.ToString("HH:mm") == morgenAlarm1.Text)
+            {
+                System.Media.SystemSounds.Beep.Play();
+                
+                if (i == 0){
+                    i = 1;
+                    MessageBox.Show("Tid til at tage " + morgenNavnText1.Text + " " + morgenDosisText1.Text);
+                                }
+                
+            }
         }
     }
 }
