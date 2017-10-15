@@ -13,18 +13,19 @@ namespace PillPilot
 {
     public partial class Form1 : Form
     {
-        
+        int a = 0;
 
         public Form1()
         {
             InitializeComponent();
             JustTime();
             LoadMedicineList();
+            timer1.Start();
         }
 
         private async void Blink(TextBox tb)
         {
-            while (true)
+            while (timer1.Enabled)
             {
                 await Task.Delay(500);
                 tb.BackColor = tb.BackColor == Color.White ? Color.Red : Color.White;
@@ -155,6 +156,8 @@ namespace PillPilot
                 morgenHvornår1.ForeColor = Color.Red;
 
                 morgenHvornår1.CustomFormat = " ";
+
+                timer1.Start();
             }
             else
             {
@@ -170,7 +173,7 @@ namespace PillPilot
                 morgenHvornår1.CustomFormat = "HH:mm";
                 morgenHvornår1.Text = DateTime.Now.ToString("HH:mm");
 
-                Blink(morgenNavnText1);
+                timer1.Stop();
             }
         }
 
@@ -239,6 +242,8 @@ namespace PillPilot
 
                 middagHvornår1.CustomFormat = "HH:mm";
                 middagHvornår1.Text = DateTime.Now.ToString("HH:mm");
+
+                a = 1;
             }
         }
 
@@ -341,7 +346,7 @@ namespace PillPilot
 
         }
 
-        int a = 0;
+        
         int b = 0;
         int c = 0;
         int d = 0;
@@ -359,7 +364,7 @@ namespace PillPilot
                 System.Media.SystemSounds.Beep.Play();
                 if (a == 0)
                 {
-                    a = 1;
+                    
                     //MessageBox.Show("Tid til at tage " + morgenNavnText1.Text + " " + morgenDosisText1.Text);
                     Blink(morgenNavnText1);
                     Blink(morgenDosisText1);
