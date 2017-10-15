@@ -96,6 +96,13 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.morgenBlinker1 = new System.Windows.Forms.RadioButton();
+            this.morgenBlinker2 = new System.Windows.Forms.RadioButton();
+            this.middagBlinker1 = new System.Windows.Forms.RadioButton();
+            this.middagBlinker2 = new System.Windows.Forms.RadioButton();
+            this.aftenBlinker1 = new System.Windows.Forms.RadioButton();
+            this.aftenBlinker2 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -184,7 +191,7 @@
             // 
             // morgenNavnText1
             // 
-            this.morgenNavnText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.morgenNavnText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.morgenNavnText1.ForeColor = System.Drawing.Color.Red;
             this.morgenNavnText1.Location = new System.Drawing.Point(18, 76);
             this.morgenNavnText1.Name = "morgenNavnText1";
@@ -194,7 +201,7 @@
             // 
             // morgenDosisText1
             // 
-            this.morgenDosisText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.morgenDosisText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.morgenDosisText1.ForeColor = System.Drawing.Color.Red;
             this.morgenDosisText1.Location = new System.Drawing.Point(159, 76);
             this.morgenDosisText1.Name = "morgenDosisText1";
@@ -203,7 +210,7 @@
             // 
             // morgenFormText1
             // 
-            this.morgenFormText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.morgenFormText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.morgenFormText1.ForeColor = System.Drawing.Color.Red;
             this.morgenFormText1.Location = new System.Drawing.Point(300, 76);
             this.morgenFormText1.Name = "morgenFormText1";
@@ -213,7 +220,7 @@
             // 
             // morgenFarveText1
             // 
-            this.morgenFarveText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.morgenFarveText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.morgenFarveText1.ForeColor = System.Drawing.Color.Red;
             this.morgenFarveText1.Location = new System.Drawing.Point(441, 76);
             this.morgenFarveText1.Name = "morgenFarveText1";
@@ -280,7 +287,7 @@
             // 
             // morgenFarveText2
             // 
-            this.morgenFarveText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.morgenFarveText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.morgenFarveText2.ForeColor = System.Drawing.Color.Red;
             this.morgenFarveText2.Location = new System.Drawing.Point(442, 108);
             this.morgenFarveText2.Name = "morgenFarveText2";
@@ -289,7 +296,7 @@
             // 
             // morgenFormText2
             // 
-            this.morgenFormText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.morgenFormText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.morgenFormText2.ForeColor = System.Drawing.Color.Red;
             this.morgenFormText2.Location = new System.Drawing.Point(301, 108);
             this.morgenFormText2.Name = "morgenFormText2";
@@ -298,7 +305,7 @@
             // 
             // morgenDosisText2
             // 
-            this.morgenDosisText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.morgenDosisText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.morgenDosisText2.ForeColor = System.Drawing.Color.Red;
             this.morgenDosisText2.Location = new System.Drawing.Point(160, 108);
             this.morgenDosisText2.Name = "morgenDosisText2";
@@ -307,7 +314,7 @@
             // 
             // morgenNavnText2
             // 
-            this.morgenNavnText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.morgenNavnText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.morgenNavnText2.ForeColor = System.Drawing.Color.Red;
             this.morgenNavnText2.Location = new System.Drawing.Point(19, 108);
             this.morgenNavnText2.Name = "morgenNavnText2";
@@ -345,7 +352,7 @@
             // 
             // middagFarveText2
             // 
-            this.middagFarveText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.middagFarveText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.middagFarveText2.ForeColor = System.Drawing.Color.Red;
             this.middagFarveText2.Location = new System.Drawing.Point(442, 267);
             this.middagFarveText2.Name = "middagFarveText2";
@@ -354,7 +361,7 @@
             // 
             // middagFormText2
             // 
-            this.middagFormText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.middagFormText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.middagFormText2.ForeColor = System.Drawing.Color.Red;
             this.middagFormText2.Location = new System.Drawing.Point(301, 267);
             this.middagFormText2.Name = "middagFormText2";
@@ -363,7 +370,7 @@
             // 
             // middagDosisText2
             // 
-            this.middagDosisText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.middagDosisText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.middagDosisText2.ForeColor = System.Drawing.Color.Red;
             this.middagDosisText2.Location = new System.Drawing.Point(160, 267);
             this.middagDosisText2.Name = "middagDosisText2";
@@ -372,12 +379,13 @@
             // 
             // middagNavnText2
             // 
-            this.middagNavnText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.middagNavnText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.middagNavnText2.ForeColor = System.Drawing.Color.Red;
             this.middagNavnText2.Location = new System.Drawing.Point(19, 267);
             this.middagNavnText2.Name = "middagNavnText2";
             this.middagNavnText2.Size = new System.Drawing.Size(100, 26);
             this.middagNavnText2.TabIndex = 37;
+            this.middagNavnText2.TextChanged += new System.EventHandler(this.middagNavnText2_TextChanged);
             // 
             // middagHvornår1
             // 
@@ -410,16 +418,17 @@
             // 
             // middagFarveText1
             // 
-            this.middagFarveText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.middagFarveText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.middagFarveText1.ForeColor = System.Drawing.Color.Red;
             this.middagFarveText1.Location = new System.Drawing.Point(441, 235);
             this.middagFarveText1.Name = "middagFarveText1";
             this.middagFarveText1.Size = new System.Drawing.Size(100, 26);
             this.middagFarveText1.TabIndex = 33;
+            this.middagFarveText1.TextChanged += new System.EventHandler(this.middagFarveText1_TextChanged);
             // 
             // middagFormText1
             // 
-            this.middagFormText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.middagFormText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.middagFormText1.ForeColor = System.Drawing.Color.Red;
             this.middagFormText1.Location = new System.Drawing.Point(300, 235);
             this.middagFormText1.Name = "middagFormText1";
@@ -428,7 +437,7 @@
             // 
             // middagDosisText1
             // 
-            this.middagDosisText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.middagDosisText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.middagDosisText1.ForeColor = System.Drawing.Color.Red;
             this.middagDosisText1.Location = new System.Drawing.Point(159, 235);
             this.middagDosisText1.Name = "middagDosisText1";
@@ -437,7 +446,7 @@
             // 
             // middagNavnText1
             // 
-            this.middagNavnText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.middagNavnText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.middagNavnText1.ForeColor = System.Drawing.Color.Red;
             this.middagNavnText1.Location = new System.Drawing.Point(18, 235);
             this.middagNavnText1.Name = "middagNavnText1";
@@ -555,7 +564,7 @@
             // 
             // aftenFarveText2
             // 
-            this.aftenFarveText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aftenFarveText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aftenFarveText2.ForeColor = System.Drawing.Color.Red;
             this.aftenFarveText2.Location = new System.Drawing.Point(443, 425);
             this.aftenFarveText2.Name = "aftenFarveText2";
@@ -564,7 +573,7 @@
             // 
             // aftenFormText2
             // 
-            this.aftenFormText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aftenFormText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aftenFormText2.ForeColor = System.Drawing.Color.Red;
             this.aftenFormText2.Location = new System.Drawing.Point(302, 425);
             this.aftenFormText2.Name = "aftenFormText2";
@@ -573,7 +582,7 @@
             // 
             // aftenDosisText2
             // 
-            this.aftenDosisText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aftenDosisText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aftenDosisText2.ForeColor = System.Drawing.Color.Red;
             this.aftenDosisText2.Location = new System.Drawing.Point(161, 425);
             this.aftenDosisText2.Name = "aftenDosisText2";
@@ -582,7 +591,7 @@
             // 
             // aftenNavnText2
             // 
-            this.aftenNavnText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aftenNavnText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aftenNavnText2.ForeColor = System.Drawing.Color.Red;
             this.aftenNavnText2.Location = new System.Drawing.Point(20, 425);
             this.aftenNavnText2.Name = "aftenNavnText2";
@@ -620,7 +629,7 @@
             // 
             // aftenFarveText1
             // 
-            this.aftenFarveText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aftenFarveText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aftenFarveText1.ForeColor = System.Drawing.Color.Red;
             this.aftenFarveText1.Location = new System.Drawing.Point(442, 393);
             this.aftenFarveText1.Name = "aftenFarveText1";
@@ -629,7 +638,7 @@
             // 
             // aftenFormText1
             // 
-            this.aftenFormText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aftenFormText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aftenFormText1.ForeColor = System.Drawing.Color.Red;
             this.aftenFormText1.Location = new System.Drawing.Point(301, 393);
             this.aftenFormText1.Name = "aftenFormText1";
@@ -638,7 +647,7 @@
             // 
             // aftenDosisText1
             // 
-            this.aftenDosisText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aftenDosisText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aftenDosisText1.ForeColor = System.Drawing.Color.Red;
             this.aftenDosisText1.Location = new System.Drawing.Point(160, 393);
             this.aftenDosisText1.Name = "aftenDosisText1";
@@ -647,7 +656,7 @@
             // 
             // aftenNavnText1
             // 
-            this.aftenNavnText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aftenNavnText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aftenNavnText1.ForeColor = System.Drawing.Color.Red;
             this.aftenNavnText1.Location = new System.Drawing.Point(19, 393);
             this.aftenNavnText1.Name = "aftenNavnText1";
@@ -740,11 +749,81 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // morgenBlinker1
+            // 
+            this.morgenBlinker1.AutoSize = true;
+            this.morgenBlinker1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.morgenBlinker1.Checked = true;
+            this.morgenBlinker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.morgenBlinker1.Location = new System.Drawing.Point(1123, 85);
+            this.morgenBlinker1.Name = "morgenBlinker1";
+            this.morgenBlinker1.Size = new System.Drawing.Size(58, 24);
+            this.morgenBlinker1.TabIndex = 67;
+            this.morgenBlinker1.TabStop = true;
+            this.morgenBlinker1.Text = "test";
+            this.morgenBlinker1.UseVisualStyleBackColor = false;
+            // 
+            // morgenBlinker2
+            // 
+            this.morgenBlinker2.AutoSize = true;
+            this.morgenBlinker2.Location = new System.Drawing.Point(1123, 116);
+            this.morgenBlinker2.Name = "morgenBlinker2";
+            this.morgenBlinker2.Size = new System.Drawing.Size(14, 13);
+            this.morgenBlinker2.TabIndex = 70;
+            this.morgenBlinker2.TabStop = true;
+            this.morgenBlinker2.UseVisualStyleBackColor = true;
+            // 
+            // middagBlinker1
+            // 
+            this.middagBlinker1.AutoSize = true;
+            this.middagBlinker1.Location = new System.Drawing.Point(1122, 243);
+            this.middagBlinker1.Name = "middagBlinker1";
+            this.middagBlinker1.Size = new System.Drawing.Size(14, 13);
+            this.middagBlinker1.TabIndex = 71;
+            this.middagBlinker1.TabStop = true;
+            this.middagBlinker1.UseVisualStyleBackColor = true;
+            // 
+            // middagBlinker2
+            // 
+            this.middagBlinker2.AutoSize = true;
+            this.middagBlinker2.Location = new System.Drawing.Point(1123, 275);
+            this.middagBlinker2.Name = "middagBlinker2";
+            this.middagBlinker2.Size = new System.Drawing.Size(14, 13);
+            this.middagBlinker2.TabIndex = 72;
+            this.middagBlinker2.TabStop = true;
+            this.middagBlinker2.UseVisualStyleBackColor = true;
+            // 
+            // aftenBlinker1
+            // 
+            this.aftenBlinker1.AutoSize = true;
+            this.aftenBlinker1.Location = new System.Drawing.Point(1122, 401);
+            this.aftenBlinker1.Name = "aftenBlinker1";
+            this.aftenBlinker1.Size = new System.Drawing.Size(14, 13);
+            this.aftenBlinker1.TabIndex = 73;
+            this.aftenBlinker1.TabStop = true;
+            this.aftenBlinker1.UseVisualStyleBackColor = true;
+            // 
+            // aftenBlinker2
+            // 
+            this.aftenBlinker2.AutoSize = true;
+            this.aftenBlinker2.Location = new System.Drawing.Point(1123, 431);
+            this.aftenBlinker2.Name = "aftenBlinker2";
+            this.aftenBlinker2.Size = new System.Drawing.Size(14, 13);
+            this.aftenBlinker2.TabIndex = 74;
+            this.aftenBlinker2.TabStop = true;
+            this.aftenBlinker2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1152, 525);
+            this.ClientSize = new System.Drawing.Size(1220, 525);
+            this.Controls.Add(this.aftenBlinker2);
+            this.Controls.Add(this.aftenBlinker1);
+            this.Controls.Add(this.middagBlinker2);
+            this.Controls.Add(this.middagBlinker1);
+            this.Controls.Add(this.morgenBlinker2);
+            this.Controls.Add(this.morgenBlinker1);
             this.Controls.Add(this.aftenHvornår2);
             this.Controls.Add(this.aftenTaget2);
             this.Controls.Add(this.aftenAlarm2);
@@ -888,6 +967,13 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Timer timer1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.RadioButton morgenBlinker1;
+        private System.Windows.Forms.RadioButton morgenBlinker2;
+        private System.Windows.Forms.RadioButton middagBlinker1;
+        private System.Windows.Forms.RadioButton middagBlinker2;
+        private System.Windows.Forms.RadioButton aftenBlinker1;
+        private System.Windows.Forms.RadioButton aftenBlinker2;
     }
 }
 

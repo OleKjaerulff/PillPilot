@@ -22,6 +22,15 @@ namespace PillPilot
             LoadMedicineList();
         }
 
+        private async void Blink(TextBox tb)
+        {
+            while (true)
+            {
+                await Task.Delay(500);
+                tb.BackColor = tb.BackColor == Color.White ? Color.Red : Color.White;
+            }
+        }
+
         public void JustTime()
         {
             morgenAlarm1.Format = DateTimePickerFormat.Time;
@@ -38,7 +47,7 @@ namespace PillPilot
             aftenHvornår2.Format = DateTimePickerFormat.Time;
 
             morgenAlarm1.Format = DateTimePickerFormat.Custom;
-            
+            morgenAlarm1.CustomFormat = "HH:mm";
             morgenAlarm2.Format = DateTimePickerFormat.Custom;
             morgenAlarm2.CustomFormat = "HH:mm";
             middagAlarm1.Format = DateTimePickerFormat.Custom;
@@ -160,6 +169,8 @@ namespace PillPilot
 
                 morgenHvornår1.CustomFormat = "HH:mm";
                 morgenHvornår1.Text = DateTime.Now.ToString("HH:mm");
+
+                Blink(morgenNavnText1);
             }
         }
 
@@ -191,6 +202,12 @@ namespace PillPilot
 
                 morgenHvornår2.CustomFormat = "HH:mm";
                 morgenHvornår2.Text = DateTime.Now.ToString("HH:mm");
+
+                
+
+           
+
+
             }
         }
 
@@ -334,75 +351,101 @@ namespace PillPilot
         private void timer1_Tick(object sender, EventArgs e)
         {
             
-            //String testTime = "09:36";
+            String testTime = "12:52";
 
-            //if (time.ToString("HH:mm") == testTime)
+            //if (DateTime.Now.ToString("HH:mm") == testTime)
             if (DateTime.Now.ToString("HH:mm") == morgenAlarm1.Text)
             {
                 System.Media.SystemSounds.Beep.Play();
                 if (a == 0)
                 {
                     a = 1;
-                    MessageBox.Show("Tid til at tage " + morgenNavnText1.Text + " " + morgenDosisText1.Text);
+                    //MessageBox.Show("Tid til at tage " + morgenNavnText1.Text + " " + morgenDosisText1.Text);
+                    Blink(morgenNavnText1);
+                    Blink(morgenDosisText1);
                 }
             }
 
-            //if (time.ToString("HH:mm") == testTime)
+            //if (DateTime.Now.ToString("HH:mm") == testTime)
             if (DateTime.Now.ToString("HH:mm") == morgenAlarm2.Text)
             {
                 System.Media.SystemSounds.Beep.Play();
                 if (b == 0)
                 {
                     b = 1;
-                    MessageBox.Show("Tid til at tage " + morgenNavnText2.Text + " " + morgenDosisText2.Text);
+                    //MessageBox.Show("Tid til at tage " + morgenNavnText2.Text + " " + morgenDosisText2.Text);
+                    Blink(morgenNavnText2);
+                    Blink(morgenDosisText2);
                 }
             }
 
-            //if (time.ToString("HH:mm") == testTime)
+            //if (DateTime.Now.ToString("HH:mm") == testTime)
             if (DateTime.Now.ToString("HH:mm") == middagAlarm1.Text)
             {
             System.Media.SystemSounds.Beep.Play();
                 if (c == 0)
                 {
                     c = 1;
-                    MessageBox.Show("Tid til at tage " + middagNavnText1.Text + " " + middagDosisText1.Text);
+                    //MessageBox.Show("Tid til at tage " + middagNavnText1.Text + " " + middagDosisText1.Text);
+                    Blink(middagNavnText1);
+                    Blink(middagDosisText1);
+
                 }
             }
 
-            //if (time.ToString("HH:mm") == testTime)
+            //if (DateTime.Now.ToString("HH:mm") == testTime)
             if (DateTime.Now.ToString("HH:mm") == middagAlarm2.Text)
             {
                 System.Media.SystemSounds.Beep.Play();
                 if (d == 0)
                 {
                     d = 1;
-                    MessageBox.Show("Tid til at tage " + middagNavnText2.Text + " " + middagDosisText2.Text);
+                    //MessageBox.Show("Tid til at tage " + middagNavnText2.Text + " " + middagDosisText2.Text);
+                    Blink(middagNavnText2);
+                    Blink(middagDosisText2);
+
                 }
             }
 
-            //if (time.ToString("HH:mm") == testTime)
+            //if (DateTime.Now.ToString("HH:mm") == testTime)
             if (DateTime.Now.ToString("HH:mm") == aftenAlarm1.Text)
             {
                 System.Media.SystemSounds.Beep.Play();
                 if (ee == 0)
                 {
                     ee = 1;
-                    MessageBox.Show("Tid til at tage " + aftenNavnText1.Text + " " + aftenDosisText1.Text);
+                    //MessageBox.Show("Tid til at tage " + aftenNavnText1.Text + " " + aftenDosisText1.Text);
+                    Blink(aftenNavnText1);
+                    Blink(aftenDosisText1);
+
                 }
             }
 
 
-            //if (time.ToString("HH:mm") == testTime)
+            //if (DateTime.Now.ToString("HH:mm") == testTime)
             if (DateTime.Now.ToString("HH:mm") == aftenAlarm2.Text)
             {
                 System.Media.SystemSounds.Beep.Play();
                 if (f == 0)
                 {
                     f = 1;
-                    MessageBox.Show("Tid til at tage " + aftenNavnText2.Text + " " + aftenDosisText2.Text);
+                    //MessageBox.Show("Tid til at tage " + aftenNavnText2.Text + " " + aftenDosisText2.Text);
+                    Blink(aftenNavnText2);
+                    Blink(aftenDosisText2);
+
                 }
             }
 
+
+        }
+
+        private void middagNavnText2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void middagFarveText1_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
