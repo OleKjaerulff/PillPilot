@@ -299,21 +299,86 @@ namespace PillPilot
 
         }
 
-        int i = 0;
+        int a = 0;
+        int b = 0;
+        int c = 0;
+        int d = 0;
+        int ee = 0; //e is event symbol and cannot be used, so using ee
+        int f = 0;
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             DateTime time = DateTime.Now;
-            //if (time.ToString("HH:mm") == "14:51")
+            String testTime = "09:36";
+
+            if (time.ToString("HH:mm") == testTime)
             //if (time.ToString("HH:mm") == morgenAlarm1.Text)
             {
                 System.Media.SystemSounds.Beep.Play();
-                
-                if (i == 0){
-                    i = 1;
+                if (a == 0)
+                {
+                    a = 1;
                     MessageBox.Show("Tid til at tage " + morgenNavnText1.Text + " " + morgenDosisText1.Text);
-                                }
-                
+                }
             }
+
+            if (time.ToString("HH:mm") == testTime)
+            //if (time.ToString("HH:mm") == morgenAlarm2.Text)
+            {
+                System.Media.SystemSounds.Beep.Play();
+                if (b == 0)
+                {
+                    b = 1;
+                    MessageBox.Show("Tid til at tage " + morgenNavnText2.Text + " " + morgenDosisText2.Text);
+                }
+            }
+
+            if (time.ToString("HH:mm") == testTime)
+            //if (time.ToString("HH:mm") == middagAlarm1.Text)
+            {
+            System.Media.SystemSounds.Beep.Play();
+                if (c == 0)
+                {
+                    c = 1;
+                    MessageBox.Show("Tid til at tage " + middagNavnText1.Text + " " + middagDosisText1.Text);
+                }
+            }
+
+            if (time.ToString("HH:mm") == testTime)
+            //if (time.ToString("HH:mm") == middagAlarm2.Text)
+            {
+                System.Media.SystemSounds.Beep.Play();
+                if (d == 0)
+                {
+                    d = 1;
+                    MessageBox.Show("Tid til at tage " + middagNavnText2.Text + " " + middagDosisText2.Text);
+                }
+            }
+
+            if (time.ToString("HH:mm") == testTime)
+            //if (time.ToString("HH:mm") == aftenAlarm1.Text)
+            {
+                System.Media.SystemSounds.Beep.Play();
+                if (ee == 0)
+                {
+                    ee = 1;
+                    MessageBox.Show("Tid til at tage " + aftenNavnText1.Text + " " + aftenDosisText1.Text);
+                }
+            }
+
+
+            if (time.ToString("HH:mm") == testTime)
+            //if (time.ToString("HH:mm") == aftenAlarm2.Text)
+            {
+                System.Media.SystemSounds.Beep.Play();
+                if (f == 0)
+                {
+                    f = 1;
+                    MessageBox.Show("Tid til at tage " + aftenNavnText2.Text + " " + aftenDosisText2.Text);
+                }
+            }
+
+
         }
     }
 }
