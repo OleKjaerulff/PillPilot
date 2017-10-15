@@ -13,12 +13,13 @@ namespace PillPilot
 {
     public partial class Form1 : Form
     {
+        
+
         public Form1()
         {
             InitializeComponent();
             JustTime();
             LoadMedicineList();
-
         }
 
         public void JustTime()
@@ -37,7 +38,7 @@ namespace PillPilot
             aftenHvornår2.Format = DateTimePickerFormat.Time;
 
             morgenAlarm1.Format = DateTimePickerFormat.Custom;
-            morgenAlarm1.CustomFormat = "HH:mm";
+            
             morgenAlarm2.Format = DateTimePickerFormat.Custom;
             morgenAlarm2.CustomFormat = "HH:mm";
             middagAlarm1.Format = DateTimePickerFormat.Custom;
@@ -50,19 +51,17 @@ namespace PillPilot
             aftenAlarm2.CustomFormat = "HH:mm";
 
             morgenHvornår1.Format = DateTimePickerFormat.Custom;
-            morgenHvornår1.CustomFormat = "HH:mm";
+            morgenHvornår1.CustomFormat = " ";
             morgenHvornår2.Format = DateTimePickerFormat.Custom;
-            morgenHvornår2.CustomFormat = "HH:mm";
+            morgenHvornår2.CustomFormat = " ";
             middagHvornår1.Format = DateTimePickerFormat.Custom;
-            middagHvornår1.CustomFormat = "HH:mm";
+            middagHvornår1.CustomFormat = " ";
             middagHvornår2.Format = DateTimePickerFormat.Custom;
-            middagHvornår2.CustomFormat = "HH:mm";
+            middagHvornår2.CustomFormat = " ";
             aftenHvornår1.Format = DateTimePickerFormat.Custom;
-            aftenHvornår1.CustomFormat = "HH:mm";
+            aftenHvornår1.CustomFormat = " ";
             aftenHvornår2.Format = DateTimePickerFormat.Custom;
-            aftenHvornår2.CustomFormat = "HH:mm";
-
-
+            aftenHvornår2.CustomFormat = " ";
         }
 
         private void LoadMedicineList()
@@ -145,6 +144,8 @@ namespace PillPilot
                 morgenAlarm1.ForeColor = Color.Red;
                 morgenTaget1.ForeColor = Color.Red;
                 morgenHvornår1.ForeColor = Color.Red;
+
+                morgenHvornår1.CustomFormat = " ";
             }
             else
             {
@@ -156,12 +157,11 @@ namespace PillPilot
                 morgenAlarm1.ForeColor = Color.Green;
                 morgenTaget1.ForeColor = Color.Green;
                 morgenHvornår1.ForeColor = Color.Green;
+
+                morgenHvornår1.CustomFormat = "HH:mm";
+                morgenHvornår1.Text = DateTime.Now.ToString("HH:mm");
             }
         }
-
-
-
-
 
         private void morgenTaget2_CheckedChanged_1(object sender, EventArgs e)
         {
@@ -175,6 +175,8 @@ namespace PillPilot
                 morgenAlarm2.ForeColor = Color.Red;
                 morgenTaget2.ForeColor = Color.Red;
                 morgenHvornår2.ForeColor = Color.Red;
+
+                morgenHvornår2.CustomFormat = " ";
             }
             else
             {
@@ -186,6 +188,9 @@ namespace PillPilot
                 morgenAlarm2.ForeColor = Color.Green;
                 morgenTaget2.ForeColor = Color.Green;
                 morgenHvornår2.ForeColor = Color.Green;
+
+                morgenHvornår2.CustomFormat = "HH:mm";
+                morgenHvornår2.Text = DateTime.Now.ToString("HH:mm");
             }
         }
 
@@ -201,6 +206,8 @@ namespace PillPilot
                 middagAlarm1.ForeColor = Color.Red;
                 middagTaget1.ForeColor = Color.Red;
                 middagHvornår1.ForeColor = Color.Red;
+
+                middagHvornår1.CustomFormat = " ";
             }
             else
             {
@@ -212,6 +219,9 @@ namespace PillPilot
                 middagAlarm1.ForeColor = Color.Green;
                 middagTaget1.ForeColor = Color.Green;
                 middagHvornår1.ForeColor = Color.Green;
+
+                middagHvornår1.CustomFormat = "HH:mm";
+                middagHvornår1.Text = DateTime.Now.ToString("HH:mm");
             }
         }
 
@@ -227,6 +237,8 @@ namespace PillPilot
                 middagAlarm2.ForeColor = Color.Red;
                 middagTaget2.ForeColor = Color.Red;
                 middagHvornår2.ForeColor = Color.Red;
+
+                middagHvornår2.CustomFormat = " ";
             }
             else
             {
@@ -238,6 +250,9 @@ namespace PillPilot
                 middagAlarm2.ForeColor = Color.Green;
                 middagTaget2.ForeColor = Color.Green;
                 middagHvornår2.ForeColor = Color.Green;
+
+                middagHvornår2.CustomFormat = "HH:mm";
+                middagHvornår2.Text = DateTime.Now.ToString("HH:mm");
             }
         }
 
@@ -254,6 +269,8 @@ namespace PillPilot
                 aftenAlarm1.ForeColor = Color.Red;
                 aftenTaget1.ForeColor = Color.Red;
                 aftenHvornår1.ForeColor = Color.Red;
+
+                aftenHvornår1.CustomFormat = " ";
             }
             else
             {
@@ -265,6 +282,9 @@ namespace PillPilot
                 aftenAlarm1.ForeColor = Color.Green;
                 aftenTaget1.ForeColor = Color.Green;
                 aftenHvornår1.ForeColor = Color.Green;
+
+                aftenHvornår1.CustomFormat = "HH:mm";
+                aftenHvornår1.Text = DateTime.Now.ToString("HH:mm");
             }
         }
 
@@ -280,6 +300,8 @@ namespace PillPilot
                 aftenAlarm2.ForeColor = Color.Red;
                 aftenTaget2.ForeColor = Color.Red;
                 aftenHvornår2.ForeColor = Color.Red;
+
+                aftenHvornår2.CustomFormat = " ";
             }
             else
             {
@@ -291,6 +313,9 @@ namespace PillPilot
                 aftenAlarm2.ForeColor = Color.Green;
                 aftenTaget2.ForeColor = Color.Green;
                 aftenHvornår2.ForeColor = Color.Green;
+
+                aftenHvornår2.CustomFormat = "HH:mm";
+                aftenHvornår2.Text = DateTime.Now.ToString("HH:mm");
             }
         }
 
@@ -308,11 +333,11 @@ namespace PillPilot
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            DateTime time = DateTime.Now;
-            String testTime = "09:36";
+            
+            //String testTime = "09:36";
 
-            if (time.ToString("HH:mm") == testTime)
-            //if (time.ToString("HH:mm") == morgenAlarm1.Text)
+            //if (time.ToString("HH:mm") == testTime)
+            if (DateTime.Now.ToString("HH:mm") == morgenAlarm1.Text)
             {
                 System.Media.SystemSounds.Beep.Play();
                 if (a == 0)
@@ -322,8 +347,8 @@ namespace PillPilot
                 }
             }
 
-            if (time.ToString("HH:mm") == testTime)
-            //if (time.ToString("HH:mm") == morgenAlarm2.Text)
+            //if (time.ToString("HH:mm") == testTime)
+            if (DateTime.Now.ToString("HH:mm") == morgenAlarm2.Text)
             {
                 System.Media.SystemSounds.Beep.Play();
                 if (b == 0)
@@ -333,8 +358,8 @@ namespace PillPilot
                 }
             }
 
-            if (time.ToString("HH:mm") == testTime)
-            //if (time.ToString("HH:mm") == middagAlarm1.Text)
+            //if (time.ToString("HH:mm") == testTime)
+            if (DateTime.Now.ToString("HH:mm") == middagAlarm1.Text)
             {
             System.Media.SystemSounds.Beep.Play();
                 if (c == 0)
@@ -344,8 +369,8 @@ namespace PillPilot
                 }
             }
 
-            if (time.ToString("HH:mm") == testTime)
-            //if (time.ToString("HH:mm") == middagAlarm2.Text)
+            //if (time.ToString("HH:mm") == testTime)
+            if (DateTime.Now.ToString("HH:mm") == middagAlarm2.Text)
             {
                 System.Media.SystemSounds.Beep.Play();
                 if (d == 0)
@@ -355,8 +380,8 @@ namespace PillPilot
                 }
             }
 
-            if (time.ToString("HH:mm") == testTime)
-            //if (time.ToString("HH:mm") == aftenAlarm1.Text)
+            //if (time.ToString("HH:mm") == testTime)
+            if (DateTime.Now.ToString("HH:mm") == aftenAlarm1.Text)
             {
                 System.Media.SystemSounds.Beep.Play();
                 if (ee == 0)
@@ -367,8 +392,8 @@ namespace PillPilot
             }
 
 
-            if (time.ToString("HH:mm") == testTime)
-            //if (time.ToString("HH:mm") == aftenAlarm2.Text)
+            //if (time.ToString("HH:mm") == testTime)
+            if (DateTime.Now.ToString("HH:mm") == aftenAlarm2.Text)
             {
                 System.Media.SystemSounds.Beep.Play();
                 if (f == 0)
